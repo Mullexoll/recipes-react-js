@@ -9,9 +9,10 @@ import {
    PlayCircleOutline,
    Settings,
    Storefront,
-   TabletMac,
 } from "@material-ui/icons";
 import { styled } from "@mui/material/styles";
+import { NavLink } from "react-router-dom";
+import nb from "./Leftbar.module.css";
 
 const StyleContainer = styled("div")(({ theme }) => ({
    height: "100vh",
@@ -60,7 +61,9 @@ const Leftbar = () => {
                   <Home />
                </IconWrapper>
                <TypographyTextWrapper>
-                  <Typography>Homepage</Typography>
+                  <NavLink className={nb.activeLink} to="/homepage">
+                     <Typography className={nb.hoverLink}>Главная</Typography>
+                  </NavLink>
                </TypographyTextWrapper>
             </ItemStyle>
             <ItemStyle>
@@ -68,7 +71,9 @@ const Leftbar = () => {
                   <Person />
                </IconWrapper>
                <TypographyTextWrapper>
-                  <Typography>Friends</Typography>
+                  <NavLink className={nb.activeLink} to="/friends">
+                     <Typography className={nb.hoverLink}>Друзья</Typography>
+                  </NavLink>
                </TypographyTextWrapper>
             </ItemStyle>
             <ItemStyle>
@@ -76,7 +81,9 @@ const Leftbar = () => {
                   <List />
                </IconWrapper>
                <TypographyTextWrapper>
-                  <Typography>Lists</Typography>
+                  <NavLink className={nb.activeLink} to="/lists">
+                     <Typography className={nb.hoverLink}>Списки</Typography>
+                  </NavLink>
                </TypographyTextWrapper>
             </ItemStyle>
             <ItemStyle>
@@ -84,7 +91,9 @@ const Leftbar = () => {
                   <PhotoCamera />
                </IconWrapper>
                <TypographyTextWrapper>
-                  <Typography>Camera</Typography>
+                  <NavLink className={nb.activeLink} to="/photo">
+                     <Typography className={nb.hoverLink}>Фото</Typography>
+                  </NavLink>
                </TypographyTextWrapper>
             </ItemStyle>
             <ItemStyle>
@@ -92,7 +101,9 @@ const Leftbar = () => {
                   <PlayCircleOutline />
                </IconWrapper>
                <TypographyTextWrapper>
-                  <Typography>Videos</Typography>
+                  <NavLink className={nb.activeLink} to="/video">
+                     <Typography className={nb.hoverLink}>Видео</Typography>
+                  </NavLink>
                </TypographyTextWrapper>
             </ItemStyle>
             <ItemStyle>
@@ -100,15 +111,9 @@ const Leftbar = () => {
                   <Bookmark />
                </IconWrapper>
                <TypographyTextWrapper>
-                  <Typography>Collections</Typography>
-               </TypographyTextWrapper>
-            </ItemStyle>
-            <ItemStyle>
-               <IconWrapper>
-                  <TabletMac />
-               </IconWrapper>
-               <TypographyTextWrapper>
-                  <Typography>Apps</Typography>
+                  <NavLink className={nb.activeLink} to="/collection">
+                     <Typography className={nb.hoverLink}>Избранное</Typography>
+                  </NavLink>
                </TypographyTextWrapper>
             </ItemStyle>
             <ItemStyle>
@@ -116,7 +121,9 @@ const Leftbar = () => {
                   <Storefront />
                </IconWrapper>
                <TypographyTextWrapper>
-                  <Typography>Market</Typography>
+                  <NavLink className={nb.activeLink} to="/market">
+                     <Typography className={nb.hoverLink}>Маркет</Typography>
+                  </NavLink>
                </TypographyTextWrapper>
             </ItemStyle>
             <ItemStyle>
@@ -124,7 +131,9 @@ const Leftbar = () => {
                   <Settings />
                </IconWrapper>
                <TypographyTextWrapper>
-                  <Typography>Settings</Typography>
+                  <NavLink className={nb.activeLink} to="/settings">
+                     <Typography className={nb.hoverLink}>Настройки</Typography>
+                  </NavLink>
                </TypographyTextWrapper>
             </ItemStyle>
             <ItemStyle>
@@ -132,7 +141,9 @@ const Leftbar = () => {
                   <ExitToApp />
                </IconWrapper>
                <TypographyTextWrapper>
-                  <Typography>Logout</Typography>
+                  <NavLink className={nb.activeLink} to="/logout">
+                     <Typography className={nb.hoverLink}>Выход</Typography>
+                  </NavLink>
                </TypographyTextWrapper>
             </ItemStyle>
          </Container>

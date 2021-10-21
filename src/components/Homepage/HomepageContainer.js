@@ -1,6 +1,10 @@
 import RecipeReviewCard from "./Cards";
 import { connect } from "react-redux";
-import { setLikedPost, setUsers } from "../../redux/reducers/homepage-reducer";
+import {
+   setLikedPost,
+   setUsers,
+   createNewError,
+} from "../../redux/reducers/homepage-reducer";
 import React from "react";
 import axios from "axios";
 
@@ -23,6 +27,8 @@ class HomepageContainer extends React.Component {
             <RecipeReviewCard
                users={this.props.users}
                setLikedPost={this.props.setLikedPost}
+               createNewError={this.props.createNewError}
+               errors={this.props.errors}
             />
          </>
       );
@@ -32,9 +38,12 @@ class HomepageContainer extends React.Component {
 let mapStateToProps = (state) => {
    return {
       users: state.homepage.users,
+      errors: state.homepage.errors,
    };
 };
 
-export default connect(mapStateToProps, { setLikedPost, setUsers })(
-   HomepageContainer
-);
+export default connect(mapStateToProps, {
+   setLikedPost,
+   setUsers,
+   createNewError,
+})(HomepageContainer);

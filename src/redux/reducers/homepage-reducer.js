@@ -1,13 +1,15 @@
 const SET_LIKED_POST = "SET_LIKED_POST";
 const SET_USERS = "SET_USERS";
 const ADD_NEW_RECIPE = "UPDATE_NEW_RECIPE";
+const NEW_ERROR = "NEW_ERROR";
 
 let initialState = {
    users: [],
+   errors: "",
 };
 
 const homepageReducer = (state = initialState, action) => {
-   console.log(state);
+   console.log(state, action);
    switch (action.type) {
       case SET_LIKED_POST:
          return {
@@ -38,6 +40,11 @@ const homepageReducer = (state = initialState, action) => {
                },
             ],
          };
+      case NEW_ERROR:
+         return {
+            ...state,
+            errors: action.error,
+         };
 
       default:
          return state;
@@ -58,5 +65,7 @@ export const addNewRecipe = (date, methods, title) => ({
    methods: methods,
    title: title,
 });
+
+export const createNewError = (error) => ({ type: NEW_ERROR, error });
 
 export default homepageReducer;

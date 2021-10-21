@@ -1,11 +1,11 @@
 import { Container, Typography } from "@mui/material";
-import AvatarGroup from "@mui/material/AvatarGroup";
 import { styled } from "@mui/material/styles";
-import Avatar from "@mui/material/Avatar";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Link from "@mui/material/Link";
 import Divider from "@mui/material/Divider";
+import Avatar from "@mui/material/Avatar";
+import AvatarGroup from "@mui/material/AvatarGroup";
 
 const ContainerWrapper = styled("div")(({ theme }) => ({
    paddingTop: theme.spacing(1),
@@ -31,23 +31,21 @@ const Rightbar = () => {
             <TitleStyle>
                <Typography gutterBottom>Online Friends</Typography>
             </TitleStyle>
-            <AvatarGroup max={6} style={{ marginBottom: 20 }}>
-               <Avatar alt="Remy Sharp" src="" />
+            <AvatarGroup max={4}>
                <Avatar
-                  alt="Travis Howard"
-                  src="https://www.clipartmax.com/png/middle/21-214382_female-clipart-transparent-female-avatar.png"
+                  alt="Элайджа Вуд"
+                  src="https://www.film.ru/sites/default/files/styles/thumb_260x320/public/people/1455458-917892.jpg"
                />
                <Avatar
-                  alt="Cindy Baker"
-                  src="https://www.clipartmax.com/png/middle/21-214382_female-clipart-transparent-female-avatar.png"
-               />
-               <Avatar alt="Agnes Walker" src="" />
-               <Avatar
-                  alt="Trevor Henderson"
-                  src="https://www.clipartmax.com/png/middle/21-214382_female-clipart-transparent-female-avatar.png"
+                  alt="Дэниель Редклиф"
+                  src="https://www.film.ru/sites/default/files/people/1459631-1567405.jpg"
                />
                <Avatar
-                  alt="Trevor Henderson"
+                  alt="Сальма Хайек"
+                  src="https://ivona.ua/i/53/03/87/7/5303877/d0b714a005d923dc600941e4635931c9-quality_100Xallow_enlarge_0Xw_600Xh_0.jpg"
+               />
+               <Avatar
+                  alt="Agnes Walker"
                   src="https://www.clipartmax.com/png/middle/21-214382_female-clipart-transparent-female-avatar.png"
                />
                <Avatar
@@ -55,6 +53,7 @@ const Rightbar = () => {
                   src="https://www.clipartmax.com/png/middle/21-214382_female-clipart-transparent-female-avatar.png"
                />
             </AvatarGroup>
+
             <TitleStyle>
                <Typography gutterBottom>Gallery</Typography>
             </TitleStyle>
