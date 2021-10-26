@@ -57,8 +57,8 @@ const Add = (props) => {
    const RefText = () => {
       let title = titleRef.current.value;
       let date = dateRef.current.value;
-      let methods = methodsRef.current.value;
-      props.addNewRecipe(date, methods, title);
+      let ingridients = methodsRef.current.value;
+      props.addNewRecipe(date, ingridients, title);
    };
 
    const handleClose = (event, reason) => {
@@ -87,7 +87,7 @@ const Add = (props) => {
                               <TextField
                                  inputRef={titleRef}
                                  id="standard-basic"
-                                 label="Title"
+                                 label="Заголовок"
                                  size="small"
                                  style={{ width: "100%" }}
                               />
@@ -99,10 +99,9 @@ const Add = (props) => {
                                  id="outlined-multiline-static"
                                  multiline
                                  rows={4}
-                                 defaultValue="Tell your recipe..."
                                  variant="outlined"
                                  inputRef={methodsRef}
-                                 label="Description"
+                                 label="Рецепт"
                                  size="small"
                                  style={{ width: "100%" }}
                               />
@@ -116,32 +115,34 @@ const Add = (props) => {
                                  value="Public"
                                  inputRef={dateRef}
                               >
-                                 <MenuItem value="Public">Public</MenuItem>
-                                 <MenuItem value="Private">Private</MenuItem>
-                                 <MenuItem value="Unlisted">Unlisted</MenuItem>
+                                 <MenuItem value="Public">Публичный</MenuItem>
+                                 <MenuItem value="Private">Приватный</MenuItem>
+                                 <MenuItem value="Unlisted">
+                                    Вне списка
+                                 </MenuItem>
                               </TextField>
                            </div>
                         </ItemWr>
                         <ItemWr>
                            <div>
                               <FormLabel component="legend">
-                                 Who can comment?
+                                 Кто может комментировать?
                               </FormLabel>
                               <RadioGroup>
                                  <FormControlLabel
                                     value="Everybody"
                                     control={<Radio size="small" />}
-                                    label="Everybody"
+                                    label="Все"
                                  />
                                  <FormControlLabel
                                     value="My Friends"
                                     control={<Radio size="small" />}
-                                    label="My Friends"
+                                    label="Мои Друзья"
                                  />
                                  <FormControlLabel
                                     value="Nobody"
                                     control={<Radio size="small" />}
-                                    label="Nobody"
+                                    label="Никто"
                                  />
                               </RadioGroup>
                            </div>
@@ -155,16 +156,17 @@ const Add = (props) => {
                                  onClick={() => {
                                     setOpenAlert(true);
                                     RefText();
+                                    setOpen(false);
                                  }}
                               >
-                                 Create
+                                 Создать
                               </Button>
                               <Button
                                  variant="outlined"
                                  color="secondary"
                                  onClick={() => setOpen(false)}
                               >
-                                 Cancel
+                                 Отмена
                               </Button>
                            </div>
                         </ItemWr>
@@ -180,7 +182,7 @@ const Add = (props) => {
             anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
          >
             <Alert onClose={handleClose} severity="success">
-               This is a success message!
+               Рецепт добавлен!
             </Alert>
          </Snackbar>
       </>

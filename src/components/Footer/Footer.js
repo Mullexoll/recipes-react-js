@@ -16,7 +16,7 @@ export default function Footer() {
                <Grid container spacing={3}>
                   <Grid item xs={12} sm={4}>
                      <Box borderBottom={3} fontSize="20px">
-                        Help
+                        Помощь
                      </Box>
                      <Box pt={{ xs: 2 }}>
                         <Link
@@ -24,7 +24,7 @@ export default function Footer() {
                            color="inherit"
                            style={{ textDecoration: "none" }}
                         >
-                           Contact
+                           Контакты
                         </Link>
                      </Box>
                      <Box>
@@ -33,7 +33,7 @@ export default function Footer() {
                            color="inherit"
                            style={{ textDecoration: "none" }}
                         >
-                           Support
+                           Поддержка
                         </Link>
                      </Box>
                      <Box>
@@ -43,13 +43,13 @@ export default function Footer() {
                            textDecoration="none"
                            style={{ textDecoration: "none" }}
                         >
-                           Privacy
+                           Конфедициальность
                         </Link>
                      </Box>
                   </Grid>
                   <Grid item xs={12} sm={4}>
                      <Box borderBottom={3} fontSize="20px">
-                        Account
+                        Учетная Запись
                      </Box>
                      <Box pt={{ xs: 2 }}>
                         <Link
@@ -57,7 +57,7 @@ export default function Footer() {
                            color="inherit"
                            style={{ textDecoration: "none" }}
                         >
-                           Login
+                           Войти
                         </Link>
                      </Box>
                      <Box>
@@ -66,13 +66,13 @@ export default function Footer() {
                            color="inherit"
                            style={{ textDecoration: "none" }}
                         >
-                           Register
+                           Регистрация
                         </Link>
                      </Box>
                   </Grid>
                   <Grid item xs={12} sm={4}>
                      <Box borderBottom={3} fontSize="20px">
-                        Messages
+                        Сообщения
                      </Box>
                      <Box pt={{ xs: 2 }}>
                         <Link
@@ -80,7 +80,7 @@ export default function Footer() {
                            color="inherit"
                            style={{ textDecoration: "none" }}
                         >
-                           Backup
+                           Бэкап
                         </Link>
                      </Box>
                      <Box>
@@ -89,7 +89,7 @@ export default function Footer() {
                            color="inherit"
                            style={{ textDecoration: "none" }}
                         >
-                           History
+                           История
                         </Link>
                      </Box>
                      <Box>
@@ -98,7 +98,7 @@ export default function Footer() {
                            color="inherit"
                            style={{ textDecoration: "none" }}
                         >
-                           Roll
+                           Ролл
                         </Link>
                      </Box>
                   </Grid>

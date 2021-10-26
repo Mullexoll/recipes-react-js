@@ -10,6 +10,8 @@ import HomepageContainer from "./components/Homepage/HomepageContainer";
 import AddContainer from "./components/Homepage/Add/AddContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import Footer from "./components/Footer/Footer";
+import QuiltedImageList from "./components/PhotoPage/Photo";
+import Album from "./components/ListsPage/ListsPage";
 
 const RightBarMediaQuery = styled("div")(({ theme }) => ({
    [theme.breakpoints.down("sm")]: {
@@ -64,6 +66,42 @@ const App = () => {
                                  <Rightbar />
                               </RightBarMediaQuery>
                            </Grid>
+                        </>
+                     );
+                  }}
+               ></Route>
+               <Route
+                  path="/photo"
+                  render={() => {
+                     return (
+                        <>
+                           <Grid container item sm={6} xs={10} lg={7}>
+                              <QuiltedImageList />
+                           </Grid>
+                           <Grid item sm={3} lg={3}>
+                              <RightBarMediaQuery>
+                                 <Rightbar />
+                              </RightBarMediaQuery>
+                           </Grid>
+                           <AddContainer />
+                        </>
+                     );
+                  }}
+               ></Route>
+               <Route
+                  path="/lists"
+                  render={() => {
+                     return (
+                        <>
+                           <Grid container item sm={6} xs={10} lg={7}>
+                              <Album />
+                           </Grid>
+                           <Grid item sm={3} lg={3}>
+                              <RightBarMediaQuery>
+                                 <Rightbar />
+                              </RightBarMediaQuery>
+                           </Grid>
+                           <AddContainer />
                         </>
                      );
                   }}

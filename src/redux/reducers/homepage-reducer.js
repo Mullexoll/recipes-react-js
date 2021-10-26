@@ -1,3 +1,5 @@
+import cuid from "cuid";
+
 const SET_LIKED_POST = "SET_LIKED_POST";
 const SET_USERS = "SET_USERS";
 const ADD_NEW_RECIPE = "UPDATE_NEW_RECIPE";
@@ -27,18 +29,24 @@ const homepageReducer = (state = initialState, action) => {
             users: [...action.users],
          };
       case ADD_NEW_RECIPE:
+         let newRecipe = {
+            date: action.date,
+            img: "https://www.simplyrecipes.com/thmb/kuFvxBY8s3avWVIwFrO5G7aws6A=/2000x1334/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2018__07__Seafood-Paella-HORIZONTAL-ce4d8fe93ec045c0a868ec065f49800a.jpg",
+            ingridients: action.ingridients,
+            title: action.title,
+            recipe_id: cuid(),
+         };
          return {
             ...state,
-            users: [
-               {
-                  recipe_2: {
-                     date: action.date,
-                     img: "https://www.simplyrecipes.com/thmb/kuFvxBY8s3avWVIwFrO5G7aws6A=/2000x1334/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2018__07__Seafood-Paella-HORIZONTAL-ce4d8fe93ec045c0a868ec065f49800a.jpg",
-                     methods: action.methods,
-                     title: action.title,
-                  },
-               },
-            ],
+            users: state.users.map((u) => {
+               if (u.id === 0) {
+                  return {
+                     ...u,
+                     ...u.recipes.push(newRecipe),
+                  };
+               }
+               return u;
+            }),
          };
       case NEW_ERROR:
          return {
@@ -59,10 +67,10 @@ export const setLikedPost = (isLiked, usersId) => ({
 
 export const setUsers = (users) => ({ type: SET_USERS, users });
 
-export const addNewRecipe = (date, methods, title) => ({
+export const addNewRecipe = (date, ingridients, title) => ({
    type: ADD_NEW_RECIPE,
    date: date,
-   methods: methods,
+   ingridients: ingridients,
    title: title,
 });
 

@@ -29,7 +29,7 @@ const Rightbar = () => {
       <ContainerWrapper>
          <Container>
             <TitleStyle>
-               <Typography gutterBottom>Online Friends</Typography>
+               <Typography gutterBottom>Друзья Онлайн</Typography>
             </TitleStyle>
             <AvatarGroup max={4}>
                <Avatar
@@ -55,7 +55,7 @@ const Rightbar = () => {
             </AvatarGroup>
 
             <TitleStyle>
-               <Typography gutterBottom>Gallery</Typography>
+               <Typography gutterBottom>Галерея</Typography>
             </TitleStyle>
 
             <ImageList rowHeight={100} style={{ marginBottom: 20 }} cols={2}>
@@ -97,37 +97,47 @@ const Rightbar = () => {
                </ImageListItem>
             </ImageList>
             <TitleStyle>
-               <Typography gutterBottom>Categories</Typography>
+               <Typography gutterBottom>Категории Рецептов</Typography>
             </TitleStyle>
             <LinkStyle>
                <Link href="#" underline="hover" variant="h6">
-                  Sport
+                  Спортивное Питание
                </Link>
             </LinkStyle>
             <LinkStyle>
                <Link href="#" underline="hover" variant="h6">
-                  Food
+                  Уличная Еда
                </Link>
             </LinkStyle>
             <LinkStyle>
                <Link href="#" underline="hover" variant="h6">
-                  Music
+                  Для Вечеринок
+               </Link>
+            </LinkStyle>
+            <LinkStyle>
+               <Link href="#" underline="hover" variant="h6">
+                  Низкокалорийная
                </Link>
             </LinkStyle>
             <Divider flexItem style={{ marginBottom: 5 }} />
             <LinkStyle>
                <Link href="#" underline="hover" variant="h6">
-                  Movies
+                  Для Фильмов
                </Link>
             </LinkStyle>
             <LinkStyle>
                <Link href="#" underline="hover" variant="h6">
-                  Science
+                  Экзотическая Еда
                </Link>
             </LinkStyle>
             <LinkStyle>
                <Link href="#" underline="hover" variant="h6">
-                  Life
+                  Правильное Питание
+               </Link>
+            </LinkStyle>
+            <LinkStyle>
+               <Link href="#" underline="hover" variant="h6">
+                  Национальные Кухни
                </Link>
             </LinkStyle>
          </Container>

@@ -61,15 +61,14 @@ const RecipeReviewCard = (props) => {
             return u.recipes.map((recipes) => {
                return (
                   <CardPadding key={u.id}>
-                     <Card sx={{ maxWidth: 345 }}>
+                     <Card sx={{ maxWidth: 400 }}>
                         <CardHeader
                            avatar={
                               <Avatar
                                  sx={{ bgcolor: red[500] }}
                                  aria-label="recipe"
-                              >
-                                 R
-                              </Avatar>
+                                 src="https://www.film.ru/sites/default/files/styles/thumb_260x320/public/people/1455458-917892.jpg"
+                              ></Avatar>
                            }
                            action={
                               <IconButton aria-label="settings">
@@ -124,8 +123,8 @@ const RecipeReviewCard = (props) => {
                            )}
                            <MenuListComposition />
                            <ExpandMore
-                              expand={expanded[u.id]}
-                              onClick={() => handleExpandClick(u.id)}
+                              expand={expanded[recipes.id]}
+                              onClick={() => handleExpandClick(recipes.id)}
                               aria-expanded={expanded}
                               aria-label="show more"
                            >
@@ -133,7 +132,7 @@ const RecipeReviewCard = (props) => {
                            </ExpandMore>
                         </CardActions>
                         <Collapse
-                           in={expanded[u.id]}
+                           in={expanded[recipes.id]}
                            timeout="auto"
                            unmountOnExit
                         >

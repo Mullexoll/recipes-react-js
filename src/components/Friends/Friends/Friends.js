@@ -44,8 +44,8 @@ const Friends = (props) => {
                         </DescriptionStyle>
                      </CardContent>
                      <CardActions>
-                        <Button size="small">Share</Button>
-                        <Button size="small">Learn More</Button>
+                        <Button size="small">Подписаться</Button>
+                        <Button size="small">Подробнее</Button>
                      </CardActions>
                   </Card>
                </CardPadding>
